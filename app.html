@@ -1,0 +1,342 @@
+<html><head><title>AI Personal Assistant - AI Genie Hub</title>
+<style>
+  :root {
+    --primary-color: #C0E2ED;
+    --secondary-color: #000000;
+    --accent-color: #FFFFFF;
+    --text-color: #333333;
+    --card-bg: #f0f8ff;
+    --star-color: #FFD700;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+  }
+  
+  header {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(192, 226, 237, 0.5);
+  }
+  
+  .search-bar {
+    flex-grow: 1;
+    margin: 0 2rem;
+    position: relative;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .search-bar button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .auth-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .auth-button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .login {
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+  }
+  
+  .login:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  .signup {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  .signup:hover {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    box-shadow: 0 0 15px rgba(192, 226, 237, 0.5);
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 100px auto 0;
+    padding: 2rem;
+  }
+  
+  .app-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+  
+  .app-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-right: 2rem;
+  }
+  
+  .app-info h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2.5rem;
+  }
+  
+  .app-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .app-rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .stars {
+    color: var(--star-color);
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+  
+  .app-price {
+    font-weight: 600;
+    color: #4CAF50;
+  }
+  
+  .install-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .install-btn:hover {
+    background-color: #A0D2DD;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Rest of the styles remain the same */
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="home.html" class="logo">AI Genie Hub</a>
+      <div class="search-bar">
+        <input type="text" placeholder="Search AI applications...">
+        <button>🔍</button>
+      </div>
+      <div class="auth-buttons">
+        <a href="/login" class="auth-button login">Log In</a>
+        <a href="/signup" class="auth-button signup">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="app-header">
+      <img src="https://replicate.delivery/yhqm/skJevf7DnLhl5EyiQe3eCwU49i9feUn4duyul4i7kecTSfePmA/out-0.png" alt="AI Personal Assistant Icon" class="app-icon">
+      <div class="app-info">
+        <h1>AI Personal Assistant</h1>
+        <div class="app-meta">
+          <div class="app-rating">
+            <span class="stars">★★★★☆</span>
+            <span>4.2 (1,253 ratings)</span>
+          </div>
+          <span class="app-price">$9.99/month</span>
+        </div>
+        <a href="#" class="install-btn">Subscribe</a>
+      </div>
+    </section>
+    
+    <section class="app-description">
+      <h2>About AI Personal Assistant</h2>
+      <p>AI Personal Assistant is your magical companion for daily tasks and productivity enhancement. Powered by advanced artificial intelligence, this app learns your habits, preferences, and routines to provide personalized assistance that evolves with you. From managing your schedule to offering insightful recommendations, AI Personal Assistant is designed to make your life easier and more efficient.</p>
+    </section>
+    
+    <section class="app-screenshots" w-tid="29" style="opacity: 1; transform: translateY(0px); transition: all 0.5s ease-out 0s;">
+      <img src="https://replicate.delivery/yhqm/NSt37unru8otGZNhlTefAukxji3N5QHnogRIJuxvKgLle9PmA/out-0.png" alt="AI Assistant Dashboard" class="screenshot" w-tid="30" data-image_id="1" alt-rewritten="A sleek, modern dashboard interface showcasing AI-powered analytics and insights." style="max-width: 512px;">
+      <img src="https://replicate.delivery/yhqm/9Z0aIHxPsf1WXazjHuFXf6QKeWLfqU7woIIKBDCpCyUZ67fYC/out-0.png" alt="AI Assistant Schedule Management" class="screenshot" w-tid="31" data-image_id="2" alt-rewritten="A sleekly designed user interface screenshot showcasing an AI-powered scheduling and task management application." style="max-width: 512px;">
+      <img src="https://replicate.delivery/yhqm/leq9cKM91pXgKyJ6YFGFj9tpS9lrhbiBnbezRCSW6R4me9PmA/out-0.png" alt="AI Assistant Task Suggestions" class="screenshot" w-tid="32" data-image_id="3" alt-rewritten="A minimalist digital illustration depicting an AI assistant interface with task recommendation icons." style="max-width: 512px;">
+    </section>
+    
+    <section class="features">
+      <h2>Key Features</h2>
+      <ul class="feature-list">
+        <li>Intelligent task prioritization and scheduling</li>
+        <li>Natural language processing for effortless communication</li>
+        <li>Personalized productivity insights and suggestions</li>
+        <li>Seamless integration with popular productivity tools</li>
+        <li>Voice-activated commands for hands-free operation</li>
+        <li>Smart reminders and notifications based on context and location</li>
+        <li>Adaptive learning to improve recommendations over time</li>
+      </ul>
+    </section>
+    
+    <section class="reviews">
+      <h2>User Reviews</h2>
+      <div class="review">
+        <div class="review-header">
+          <span class="review-author">Emily S.</span>
+          <span class="review-date">May 15, 2023</span>
+        </div>
+        <div class="app-rating">
+          <span class="stars">★★★★★</span>
+        </div>
+        <p class="review-content">This AI assistant has completely transformed my daily routine. It's like having a personal secretary who knows me better than I know myself. The task prioritization feature is a game-changer!</p>
+      </div>
+      <div class="review">
+        <div class="review-header">
+          <span class="review-author">Alex M.</span>
+          <span class="review-date">May 10, 2023</span>
+        </div>
+        <div class="app-rating">
+          <span class="stars">★★★★☆</span>
+        </div>
+        <p class="review-content">I'm impressed with how quickly the AI adapts to my preferences. The voice commands work seamlessly, making it easy to add tasks or check my schedule on the go. Only wish it had better integration with some niche productivity apps I use.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Animated entrance for sections
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'all 0.5s ease-out';
+      observer.observe(section);
+    });
+
+    // Install button interaction
+    const installBtn = document.querySelector('.install-btn');
+    installBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      installBtn.textContent = 'Processing...';
+      installBtn.style.backgroundColor = '#4CAF50';
+      setTimeout(() => {
+        installBtn.textContent = 'Open';
+        installBtn.style.backgroundColor = '#C0E2ED';
+      }, 2000);
+    });
+
+    // Horizontal scroll for screenshots
+    const screenshots = document.querySelector('.app-screenshots');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    screenshots.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - screenshots.offsetLeft;
+      scrollLeft = screenshots.scrollLeft;
+    });
+
+    screenshots.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+
+    screenshots.addEventListener('mouseup', () => {
+      isDown = false;
+    });
+
+    screenshots.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - screenshots.offsetLeft;
+      const walk = (x - startX) * 2;
+      screenshots.scrollLeft = scrollLeft - walk;
+    });
+
+    // Search functionality
+    const searchInput = document.querySelector('.search-bar input');
+    const searchButton = document.querySelector('.search-bar button');
+
+    searchButton.addEventListener('click', performSearch);
+    searchInput.addEventListener('keyup', (e) => {
+      if (e.key === 'Enter') performSearch();
+    });
+
+    function performSearch() {
+      const searchTerm = searchInput.value.toLowerCase();
+      // In a real application, this would trigger a search request to the server
+      alert(`Searching for: ${searchTerm}`);
+    }
+
+    // Auth buttons interaction
+    const authButtons = document.querySelectorAll('.auth-buttons a');
+    authButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const action = e.target.textContent.toLowerCase();
+        alert(`Redirecting to ${action} page...`);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<html><head><title>AI Genie Hub - Contributor Sign Up</title><link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  main {
+    padding-top: 80px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .signup-header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 0 0 50px 50px;
+    margin-bottom: 2rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .signup-form {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  button[type="submit"] {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  .error-message {
+    color: var(--error-color);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  
+  .success-message {
+    color: var(--success-color);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    
+    main {
+      padding: 80px 1rem 2rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="home.html" class="logo">AI Genie Hub</a>
+      <div class="nav-links">
+        <a href="store.html">AI Marketplace</a>
+        <a href="contributor.html">Contributor</a>
+        <a href="community.html">Community</a>
+        <a href="aboutus.html">About Us</a>
+      </div>
+      <div class="auth-buttons">
+        <a href="/login" class="auth-button login">Log In</a>
+        <a href="/signup" class="auth-button signup">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="signup-header">
+      <h1>Become an AI Genie Hub Contributor</h1>
+      <p>Join our community of innovators and shape the future of AI</p>
+    </section>
+    
+    <section class="signup-form">
+      <form method="GET" action="/contributor/submit-signup">
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="expertise">Area of Expertise</label>
+          <select id="expertise" name="expertise" required>
+            <option value="">Select your primary area of expertise</option>
+            <option value="machine-learning">Machine Learning</option>
+            <option value="natural-language-processing">Natural Language Processing</option>
+            <option value="computer-vision">Computer Vision</option>
+            <option value="robotics">Robotics</option>
+            <option value="data-science">Data Science</option>
+            <option value="ai-ethics">AI Ethics</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="experience">Years of Experience</label>
+          <select id="experience" name="experience" required>
+            <option value="">Select your experience level</option>
+            <option value="0-2">0-2 years</option>
+            <option value="3-5">3-5 years</option>
+            <option value="6-10">6-10 years</option>
+            <option value="10+">10+ years</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="bio">Short Bio</label>
+          <textarea id="bio" name="bio" placeholder="Tell us about yourself and your AI experience (max 500 characters)" maxlength="500"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="portfolio">Portfolio/GitHub URL (optional)</label>
+          <input type="text" id="portfolio" name="portfolio">
+        </div>
+        
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">I agree to the <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a></label>
+        </div>
+        
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="newsletter" name="newsletter">
+          <label for="newsletter">Subscribe to our newsletter for AI insights and contributor opportunities</label>
+        </div>
+        
+        <button type="submit">Sign Up as Contributor</button>
+      </form>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 AI Genie Hub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Normally, we'd handle form submission via AJAX here
+      // For this simulation, we'll just show a success message
+      const successMessage = document.createElement('div');
+      successMessage.className = 'success-message';
+      successMessage.textContent = 'Thank you for signing up as an AI Genie Hub contributor! We\'ll review your application and get back to you soon.';
+      this.appendChild(successMessage);
+      this.reset();
+    });
+  </script>
+</body>
+</html>

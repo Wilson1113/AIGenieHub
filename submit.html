@@ -1,0 +1,225 @@
+<html>
+  <head>
+    <title>AI Genie Hub - Contributor Portal</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+<style>
+  main {
+    padding-top: 80px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .submit-header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 0 0 50px 50px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .submit-content {
+    padding: 2rem;
+  }
+  
+  .form-section {
+    margin-bottom: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+  
+  form {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  input[type="text"],
+  input[type="url"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .checkbox-group input[type="checkbox"] {
+    width: auto;
+  }
+  
+  .submit-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  .error-message {
+    color: var(--error-color);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  
+  .success-message {
+    color: var(--success-color);
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    
+    main {
+      padding: 80px 1rem 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="home.html" class="logo">AI Genie Hub</a>
+      <div class="nav-links">
+        <a href="store.html">AI Marketplace</a>
+        <a href="contributor.html">Contributor</a>
+        <a href="community.html">Community</a>
+        <a href="aboutus.html">About Us</a>
+      </div>
+      <div class="auth-buttons">
+        <a href="/login" class="auth-button login">Log In</a>
+        <a href="/signup" class="auth-button signup">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="submit-header">
+      <h1>Submit Your AI Application</h1>
+      <p>Share your innovation with the AI Genie Hub community</p>
+    </section>
+    
+    <section class="submit-content">
+      <div class="form-section">
+        <h2>Application Details</h2>
+        <form id="submit-application-form" method="GET" action="/contributor/application-status">
+          <div class="form-group">
+            <label for="app-name">Application Name *</label>
+            <input type="text" id="app-name" name="app-name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="app-description">Application Description *</label>
+            <textarea id="app-description" name="app-description" required></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="app-category">Category *</label>
+            <select id="app-category" name="app-category" required>
+              <option value="">Select a category</option>
+              <option value="natural-language-processing">Natural Language Processing</option>
+              <option value="computer-vision">Computer Vision</option>
+              <option value="predictive-analytics">Predictive Analytics</option>
+              <option value="robotics">Robotics</option>
+              <option value="voice-recognition">Voice Recognition</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="repo-url">GitHub Repository URL *</label>
+            <input type="url" id="repo-url" name="repo-url" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="demo-url">Demo Video URL</label>
+            <input type="url" id="demo-url" name="demo-url">
+          </div>
+          
+          <div class="form-group">
+            <label for="additional-info">Additional Information</label>
+            <textarea id="additional-info" name="additional-info"></textarea>
+          </div>
+          
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="terms-conditions" name="terms-conditions" required>
+            <label for="terms-conditions">I agree to the <a href="/terms-and-conditions" target="_blank">Terms and Conditions</a> *</label>
+          </div>
+          
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="guidelines-adherence" name="guidelines-adherence" required>
+            <label for="guidelines-adherence">I confirm that my application adheres to the <a href="/contributor/submission-guidelines" target="_blank">Submission Guidelines</a> *</label>
+          </div>
+          
+          <button type="submit" class="submit-button">Submit Application</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 AI Genie Hub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('submit-application-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      // Simulate form submission
+      const formData = new FormData(this);
+      const appName = formData.get('app-name');
+      
+      // Redirect to a success page (in a real scenario, this would be handled by the server)
+      window.location.href = `/contributor/application-status?app-name=${encodeURIComponent(appName)}`;
+    });
+  </script>
+</body>
+</html>

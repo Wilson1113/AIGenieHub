@@ -1,0 +1,280 @@
+<html><head><title>AI Genie Hub - Community</title><link rel="stylesheet" href="styles.css">
+</head>
+<style> 
+  main {
+    padding-top: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .community-header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 0 0 50px 50px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .community-content {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .forum-section {
+    flex: 2;
+  }
+  
+  .sidebar {
+    flex: 1;
+  }
+  
+  .forum-card, .sidebar-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .forum-card h2, .sidebar-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+  }
+  
+  .forum-topics {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .forum-topics li {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .forum-topics li:last-child {
+    border-bottom: none;
+  }
+  
+  .topic-title {
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .topic-title:hover {
+    color: var(--primary-color);
+  }
+  
+  .topic-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+  
+  .create-topic-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-topic-btn:hover {
+    background-color: #A8D8E3;
+  }
+  
+  .event-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .event-list li {
+    margin-bottom: 1rem;
+  }
+  
+  .event-date {
+    font-weight: 600;
+    color: var(--secondary-color);
+  }
+  
+  .event-title {
+    display: block;
+    margin-top: 0.3rem;
+  }
+  
+  .leaderboard-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .leaderboard-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+  }
+  
+  .user-rank {
+    font-weight: 600;
+    color: var(--secondary-color);
+  }
+  
+  .user-score {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 768px) {
+    .community-content {
+      flex-direction: column;
+    }
+    
+    .nav-links {
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="home.html" class="logo">AI Genie Hub</a>
+      <div class="nav-links">
+        <a href="store.html">AI Marketplace</a>
+        <a href="contributor.html">Contributor</a>
+        <a href="community.html">Community</a>
+        <a href="aboutus.html">About Us</a>
+      </div>
+      <div class="auth-buttons">
+        <a href="/login" class="auth-button login">Log In</a>
+        <a href="/signup" class="auth-button signup">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="community-header">
+      <h1>AI Genie Hub Community</h1>
+      <p>Connect, collaborate, and innovate with fellow AI enthusiasts</p>
+    </section>
+    
+    <section class="community-content">
+      <div class="forum-section">
+        <div class="forum-card">
+          <h2>Featured Discussions</h2>
+          <ul class="forum-topics">
+            <li>
+              <a href="/community/topic/ethics-in-ai" class="topic-title">Ethics in AI: Balancing Progress and Responsibility</a>
+              <div class="topic-meta">
+                <span>Started by @AIEthicist</span> | <span>243 replies</span> | <span>Last post: 2 hours ago</span>
+              </div>
+            </li>
+            <li>
+              <a href="/community/topic/future-of-nlp" class="topic-title">The Future of Natural Language Processing</a>
+              <div class="topic-meta">
+                <span>Started by @NLPWizard</span> | <span>178 replies</span> | <span>Last post: 5 hours ago</span>
+              </div>
+            </li>
+            <li>
+              <a href="/community/topic/ai-art-copyright" class="topic-title">AI-Generated Art: Copyright Challenges and Solutions</a>
+              <div class="topic-meta">
+                <span>Started by @CreativeAI</span> | <span>312 replies</span> | <span>Last post: 1 day ago</span>
+              </div>
+            </li>
+          </ul>
+          <a href="/community/create-topic" class="create-topic-btn">Start a New Discussion</a>
+        </div>
+        
+        <div class="forum-card">
+          <h2>Recent Topics</h2>
+          <ul class="forum-topics">
+            <li>
+              <a href="/community/topic/ai-healthcare" class="topic-title">AI in Healthcare: Revolutionizing Patient Care</a>
+              <div class="topic-meta">
+                <span>Started by @MedTechInnovator</span> | <span>87 replies</span> | <span>Last post: 30 minutes ago</span>
+              </div>
+            </li>
+            <li>
+              <a href="/community/topic/reinforcement-learning" class="topic-title">Advancements in Reinforcement Learning</a>
+              <div class="topic-meta">
+                <span>Started by @RLResearcher</span> | <span>132 replies</span> | <span>Last post: 3 hours ago</span>
+              </div>
+            </li>
+            <li>
+              <a href="/community/topic/ai-education" class="topic-title">AI in Education: Personalized Learning for All</a>
+              <div class="topic-meta">
+                <span>Started by @EduTechExpert</span> | <span>95 replies</span> | <span>Last post: 6 hours ago</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="sidebar">
+        <div class="sidebar-card">
+          <h2>Upcoming Events</h2>
+          <ul class="event-list">
+            <li>
+              <span class="event-date">June 15, 2024</span>
+              <span class="event-title">AI Ethics Webinar</span>
+            </li>
+            <li>
+              <span class="event-date">July 1-3, 2024</span>
+              <span class="event-title">AI Genie Hub Annual Conference</span>
+            </li>
+            <li>
+              <span class="event-date">July 20, 2024</span>
+              <span class="event-title">Machine Learning Workshop</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="sidebar-card">
+          <h2>Community Leaderboard</h2>
+          <ul class="leaderboard-list">
+            <li>
+              <span class="user-rank">1. @AIWizard</span>
+              <span class="user-score">15,230</span>
+            </li>
+            <li>
+              <span class="user-rank">2. @NeuralNinja</span>
+              <span class="user-score">14,980</span>
+            </li>
+            <li>
+              <span class="user-rank">3. @DataDiva</span>
+              <span class="user-score">14,755</span>
+            </li>
+            <li>
+              <span class="user-rank">4. @MLMaster</span>
+              <span class="user-score">14,320</span>
+            </li>
+            <li>
+              <span class="user-rank">5. @AIEthicist</span>
+              <span class="user-score">13,980</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 AI Genie Hub. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<html>
+  <head>
+    <title>AI Genie Hub - Your Gateway to AI-Powered Applications</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+<style>
+  main {
+    padding-top: 80px;
+  }
+  
+  .hero {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #1a1a1a 100%);
+    color: var(--accent-color);
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  @keyframes bubbles {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(50%); }
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(192, 226, 237, 0.5);
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(192, 226, 237, 0.3);
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(192, 226, 237, 0.5);
+  }
+  
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background-color: #f8f8f8;
+  }
+  
+  .feature {
+    background-color: var(--accent-color);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(192, 226, 237, 0.3);
+  }
+  
+  .feature img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .feature:hover img {
+    transform: scale(1.1) rotate(5deg);
+  }
+  
+  .feature h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+  }
+  
+  .feature p {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links, .auth-buttons {
+      display: none;
+    }
+    
+    .hero {
+      padding: 4rem 1rem;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="home.html" class="logo">AI Genie Hub</a>
+      <div class="nav-links">
+        <a href="store.html">AI Marketplace</a>
+        <a href="contributor.html">Contributor</a>
+        <a href="community.html">Community</a>
+        <a href="aboutus.html">About Us</a>
+      </div>
+      <div class="auth-buttons">
+        <a href="/login" class="auth-button login">Log In</a>
+        <a href="/signup" class="auth-button signup">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <h1>Unleash the Power of AI Applications</h1>
+      <p>Discover, create, and share cutting-edge AI-powered apps in our magical digital realm.</p>
+      <a href="store.html" class="cta-button">Begin Your AI Adventure</a>
+    </section>
+    
+    <section class="features">
+      <div class="feature">
+        <img src="pic/home_pic1.jpg" alt="Magical App Store Icon">
+        <h2>Enchanted App Store</h2>
+        <p>Explore a mystical collection of AI-powered applications that will transform your digital experience.</p>
+      </div>
+      <div class="feature">
+        <img src="pic/home_pic2.jpg" alt="Create Magic Icon">
+        <h2>Create Your Magic</h2>
+        <p>Craft your own AI-powered applications with our intuitive tools and unleash your creativity.</p>
+      </div>
+      <div class="feature">
+        <img src="pic/home_pic3.jpg" alt="Wizards' Community Icon">
+        <h2>Wizards' Community</h2>
+        <p>Join a thriving community of AI enthusiasts, share ideas, and collaborate on magical projects.</p>
+      </div>
+      <div class="feature">
+        <img src="pic/home_pic4.jpg" alt="AI Insights Icon">
+        <h2>AI Insights</h2>
+        <p>Stay up-to-date with the latest AI trends, news, and breakthroughs in the world of artificial intelligence.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Dynamic header
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Animated entrance for features
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.feature').forEach(feature => {
+      feature.style.opacity = '0';
+      feature.style.transform = 'translateY(50px)';
+      feature.style.transition = 'all 0.5s ease-out';
+      observer.observe(feature);
+    });
+
+    // Interactive logo
+    const logo = document.querySelector('.logo');
+    logo.addEventListener('mouseover', () => {
+      logo.style.transform = 'scale(1.1) rotate(5deg)';
+    });
+    logo.addEventListener('mouseout', () => {
+      logo.style.transform = 'scale(1) rotate(0)';
+    });
+
+    // Simulated login and signup
+    document.querySelector('.login').addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('Welcome back, esteemed AI wizard! Please enter your magical credentials to access your realm.');
+    });
+
+    document.querySelector('.signup').addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('Greetings, aspiring AI creator! Prepare to embark on a journey of digital innovation. Please create your account to begin.');
+    });
+  </script>
+</body>
+</html>

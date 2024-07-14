@@ -1,0 +1,300 @@
+<html><head><title>AI Genie Hub - About Us</title><link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+  main {
+    padding-top: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 0 0 50px 50px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-content {
+    padding: 2rem;
+  }
+  
+  .about-section {
+    margin-bottom: 3rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .team-member {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .member-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .member-role {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+  
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  .timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: var(--accent-color);
+    border: 4px solid var(--primary-color);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .left {
+    left: 0;
+  }
+  
+  .right {
+    left: 50%;
+  }
+  
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid var(--primary-color);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--primary-color);
+  }
+  
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid var(--primary-color);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--primary-color) transparent transparent;
+  }
+  
+  .right::after {
+    left: -16px;
+  }
+  
+  .timeline-content {
+    padding: 20px 30px;
+    background-color: var(--card-bg);
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .timeline::after {
+      left: 31px;
+    }
+    
+    .timeline-item {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+    
+    .timeline-item::before {
+      left: 60px;
+      border: medium solid var(--primary-color);
+      border-width: 10px 10px 10px 0;
+      border-color: transparent var(--primary-color) transparent transparent;
+    }
+  
+    .left::after, .right::after {
+      left: 15px;
+    }
+  
+    .right {
+      left: 0%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="home.html" class="logo">AI Genie Hub</a>
+      <div class="nav-links">
+        <a href="store.html">AI Marketplace</a>
+        <a href="contributor.html">Contributor</a>
+        <a href="community.html">Community</a>
+        <a href="aboutus.html">About Us</a>
+      </div>
+      <div class="auth-buttons">
+        <a href="/login" class="auth-button login">Log In</a>
+        <a href="/signup" class="auth-button signup">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="about-header">
+      <h1>About AI Genie Hub</h1>
+      <p>Empowering the world through accessible AI innovation</p>
+    </section>
+    
+    <section class="about-content">
+      <div class="about-section">
+        <h2>Our Mission</h2>
+        <p>At AI Genie Hub, we believe in the transformative power of artificial intelligence to solve complex problems and improve lives. Our mission is to democratize AI technology, making it accessible to developers, businesses, and individuals worldwide. We strive to create an ecosystem where innovation thrives, ethical considerations are at the forefront, and the benefits of AI are shared by all.</p>
+      </div>
+      
+      <div class="about-section">
+        <h2>Our Journey</h2>
+        <div class="timeline">
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h3>2024</h3>
+              <p>AI Genie Hub founded by a group of AI researchers and developers with a vision to make AI accessible to all.</p>
+            </div>
+          </div>
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h3>2026</h3>
+              <p>Launch of our first AI marketplace, featuring 50 applications across various domains.</p>
+            </div>
+          </div>
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h3>2027</h3>
+              <p>Introduction of the AI Genie Hub community platform, fostering collaboration among AI enthusiasts.</p>
+            </div>
+          </div>
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h3>2028</h3>
+              <p>Expansion of our contributor program, empowering developers to showcase and monetize their AI creations.</p>
+            </div>
+          </div>
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h3>2029</h3>
+              <p>Launch of AI Genie Hub Academy, providing free AI education and resources to learners worldwide.</p>
+            </div>
+          </div>
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h3>2030</h3>
+              <p>Reaching a milestone of 1 million users and 10,000 AI applications on our platform.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="about-section">
+        <h2>Our Team</h2>
+        <p>Behind AI Genie Hub is a diverse team of passionate individuals dedicated to pushing the boundaries of AI technology and its applications.</p>
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="" alt="Wilson" width="150" height="150">
+            <h3 class="member-name">Teo Shi Yang</h3>
+            <p class="member-role">Founder</p>
+          </div>
+          <div class="team-member">
+            <img src="" alt="JH" width="150" height="150">
+            <h3 class="member-name">Lai Jun Hao</h3>
+            <p class="member-role">Founder</p>
+          </div>
+          <div class="team-member">
+        </div>
+      </div>
+      
+      <div class="about-section">
+        <h2>Our Values</h2>
+        <ul>
+          <li><strong>Innovation:</strong> We constantly push the boundaries of what's possible with AI.</li>
+          <li><strong>Accessibility:</strong> We believe AI should be available to everyone, regardless of technical background.</li>
+          <li><strong>Ethics:</strong> We prioritize responsible AI development and usage.</li>
+          <li><strong>Collaboration:</strong> We foster a community where knowledge-sharing and teamwork thrive.</li>
+          <li><strong>Empowerment:</strong> We equip individuals and businesses with the tools to leverage AI effectively.</li>
+        </ul>
+      </div>
+      
+      <div class="about-section">
+        <h2>Join Us in Shaping the Future of AI</h2>
+        <p>Whether you're a developer, business leader, or AI enthusiast, there's a place for you in the AI Genie Hub community. Together, we can harness the power of AI to create a better world for all.</p>
+        <p>Ready to get started? <a href="/signup">Sign up</a> for an account or <a href="/contact">contact us</a> to learn more about how you can be part of the AI revolution.</p>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 AI Genie Hub. All rights reserved.</p>
+  </footer>
+</body>
+</html>

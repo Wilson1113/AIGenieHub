@@ -1,0 +1,228 @@
+<html>
+  <head>
+    <title>AI Genie Hub - Contributor Portal</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+<style>
+  main {
+    padding-top: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contributor-header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 0 0 50px 50px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contributor-content {
+    padding: 2rem;
+  }
+  
+  .contributor-section {
+    margin-bottom: 3rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+  }
+  
+  .card ul {
+    padding-left: 1.5rem;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  
+  .stat-item {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+  }
+  
+  .stat-label {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    
+    .card-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="home.html" class="logo">AI Genie Hub</a>
+      <div class="nav-links">
+        <a href="store.html">AI Marketplace</a>
+        <a href="contributor.html">Contributor</a>
+        <a href="community.html">Community</a>
+        <a href="aboutus.html">About Us</a>
+      </div>
+      <div class="auth-buttons">
+        <a href="/login" class="auth-button login">Log In</a>
+        <a href="/signup" class="auth-button signup">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="contributor-header">
+      <h1>AI Genie Hub Contributor Portal</h1>
+      <p>Unleash your AI creations and shape the future of technology</p>
+    </section>
+    
+    <section class="contributor-content">
+      <div class="contributor-section">
+        <h2>Why Become a Contributor?</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Showcase Your Talent</h3>
+            <p>Present your AI innovations to a global audience of developers, businesses, and tech enthusiasts.</p>
+          </div>
+          <div class="card">
+            <h3>Monetize Your Work</h3>
+            <p>Turn your AI projects into profitable ventures with our flexible revenue-sharing model.</p>
+          </div>
+          <div class="card">
+            <h3>Collaborate and Learn</h3>
+            <p>Connect with like-minded individuals, participate in challenges, and grow your skills.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contributor-section">
+        <h2>How It Works</h2>
+        <ol>
+          <li><strong>Sign Up:</strong> Sign up to become contributor.</li>
+          <li><strong>Submit:</strong> Upload your application to our platform for review.</li>
+          <li><strong>Refine:</strong> Receive feedback from our expert team and make necessary improvements.</li>
+          <li><strong>Launch:</strong> Once approved, your app goes live on the AI Genie Hub Marketplace.</li>
+          <li><strong>Grow:</strong> Monitor performance, gather user feedback, and update your app to ensure continued success.</li>
+        </ol>
+        <a href="contributor_signup.html" class="cta-button">Become a Contributor</a>
+        <a href="submit.html" class="cta-button">Submit</a>
+      </div>
+      
+      <div class="contributor-section">
+        <h2>Contributor Success Stories</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>EmoSense AI</h3>
+            <p>"Our emotion recognition API has seen a 500% increase in usage since joining AI Genie Hub. The exposure and support have been incredible!" - Sarah K., Lead Developer</p>
+          </div>
+          <div class="card">
+            <h3>CodeGenius</h3>
+            <p>"What started as a side project is now a full-fledged business. AI Genie Hub's platform and community have been instrumental in our growth." - Alex M., Founder</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contributor-section">
+        <h2>Resources and Support</h2>
+        <ul>
+          <li>Comprehensive documentation and API references</li>
+          <li>Regular webinars and workshops on AI development best practices</li>
+          <li>Dedicated support team for technical assistance</li>
+          <li>Marketing and promotion opportunities for top-performing apps</li>
+          <li>Access to cutting-edge AI tools and technologies</li>
+        </ul>
+      </div>
+      
+      <div class="contributor-section">
+        <h2>AI Genie Hub Contributor Community by the Numbers at 2030</h2>
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-number">10,000+</span>
+            <span class="stat-label">Active Contributors</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">5,000+</span>
+            <span class="stat-label">Published Applications</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">$50M+</span>
+            <span class="stat-label">Paid to Contributors</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">1M+</span>
+            <span class="stat-label">Monthly Active Users</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contributor-section">
+        <h2>Ready to Make Your Mark in AI?</h2>
+        <p>Join the AI Genie Hub Contributor community today and be part of the AI revolution. Whether you're an experienced developer or just starting your AI journey, there's a place for you here.</p>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 AI Genie Hub. All rights reserved.</p>
+  </footer>
+</body>
+</html>

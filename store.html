@@ -1,0 +1,389 @@
+<html><head><title>AI Genie Hub - Enchanted AI Application Store</title><link rel="stylesheet" href="styles.css">
+</head>
+  
+<style>
+  main {
+    padding-top: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .store-header {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    padding: 6rem 2rem;
+    text-align: center;
+    border-radius: 0 0 50px 50px;
+    margin-bottom: 2rem;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .store-header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--accent-color);
+  }
+  
+  .search-section {
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+  
+  .search-bar {
+    display: flex;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    background-color: var(--accent-color);
+  }
+  
+  .search-bar input {
+    flex-grow: 1;
+    padding: 1rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .search-bar button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .search-bar button:hover {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+  }
+  
+  .category-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .category-filter {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .category-filter:hover, .category-filter.active {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--primary-color);
+  }
+  
+  .app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .app-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .app-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(192, 226, 237, 0.3);
+  }
+  
+  .app-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .app-info {
+    padding: 1.5rem;
+  }
+  
+  .app-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+  }
+  
+  .app-description {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+  }
+  
+  .app-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .app-price {
+    font-weight: 600;
+    color: var(--secondary-color);
+  }
+  
+  .app-rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .stars {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+  }
+  
+  .rating-value {
+    font-weight: 600;
+    color: var(--secondary-color);
+  }
+  
+  @media (max-width: 768px) {
+    .store-header {
+      padding: 4rem 1rem;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    .app-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .nav-links {
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="home.html" class="logo">AI Genie Hub</a>
+      <div class="nav-links">
+        <a href="store.html">AI Marketplace</a>
+        <a href="contributor.html">Contributor</a>
+        <a href="community.html">Community</a>
+        <a href="aboutus.html">About Us</a>
+      </div>
+      <div class="auth-buttons">
+        <a href="/login" class="auth-button login">Log In</a>
+        <a href="/signup" class="auth-button signup">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="store-header">
+      <h1>Enchanted AI Application Store</h1>
+      <p>Discover magical AI-powered applications to enhance your digital realm</p>
+      <div class="search-section">
+        <form class="search-bar" method="GET" action="/store/search">
+          <input type="text" id="search-input" name="q" placeholder="Search for AI applications...">
+          <button type="submit" id="search-button">Search</button>
+        </form>
+        <div class="category-filters">
+          <button class="category-filter active" data-category="all">All</button>
+          <button class="category-filter" data-category="productivity">Productivity</button>
+          <button class="category-filter" data-category="language">Language</button>
+          <button class="category-filter" data-category="creativity">Creativity</button>
+          <button class="category-filter" data-category="home">Smart Home</button>
+          <button class="category-filter" data-category="health">Health</button>
+          <button class="category-filter" data-category="development">Development</button>
+          <button class="category-filter" data-category="education">Education</button>
+          <button class="category-filter" data-category="finance">Finance</button>
+        </div>
+      </div>
+    </section>
+    
+    <section class="app-grid">
+      <div class="app-card" data-category="productivity" onclick="window.location.href='app.html'">
+        <img src="pic/store_pic1.png" alt="AI Personal Assistant" class="app-image">
+        <div class="app-info">
+          <h2 class="app-name">AI Personal Assistant</h2>
+          <p class="app-description">Your magical companion for daily tasks and productivity enhancement.</p>
+          <div class="app-meta">
+            <p class="app-price">$9.99/month</p>
+            <div class="app-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-value">4.2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="app-card" data-category="language" onclick="window.location.href='/app/language-wizard'">
+        <img src="pic/store_pic2.png" alt="Language Wizard" class="app-image">
+        <div class="app-info">
+          <h2 class="app-name">Language Wizard</h2>
+          <p class="app-description">Master any language with AI-powered learning and real-time translation.</p>
+          <div class="app-meta">
+            <p class="app-price">$14.99/month</p>
+            <div class="app-rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-value">4.8</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="app-card" data-category="creativity" onclick="window.location.href='/app/ai-art-generator'">
+        <img src="pic/store_pic3.png" alt="AI Art Generator" class="app-image">
+        <div class="app-info">
+          <h2 class="app-name">AI Art Generator</h2>
+          <p class="app-description">Transform your ideas into stunning artwork with AI magic.</p>
+          <div class="app-meta">
+            <p class="app-price">$19.99/month</p>
+            <div class="app-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-value">4.5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="app-card" data-category="home" onclick="window.location.href='/app/smart-home-enchanter'">
+        <img src="pic/store_pic4.png" alt="Smart Home Enchanter" class="app-image">
+        <div class="app-info">
+          <h2 class="app-name">Smart Home Enchanter</h2>
+          <p class="app-description">Automate and optimize your living space with AI-driven insights.</p>
+          <div class="app-meta">
+            <p class="app-price">$24.99/month</p>
+            <div class="app-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-value">4.3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="app-card" data-category="health" onclick="window.location.href='/app/health-oracle'">
+        <img src="pic/store_pic5.png" alt="Health Oracle" class="app-image">
+        <div class="app-info">
+          <h2 class="app-name">Health Oracle</h2>
+          <p class="app-description">Personalized health insights and predictions powered by AI.</p>
+          <div class="app-meta">
+            <p class="app-price">$29.99/month</p>
+            <div class="app-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-value">4.6</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="app-card" data-category="development" onclick="window.location.href='/app/code-conjurer'">
+        <img src="pic/store_pic6.png" alt="Code Conjurer" class="app-image">
+        <div class="app-info">
+          <h2 class="app-name">Code Conjurer</h2>
+          <p class="app-description">AI-assisted coding and debugging for software sorcerers.</p>
+          <div class="app-meta">
+            <p class="app-price">$39.99/month</p>
+            <div class="app-rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-value">4.9</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="app-card" data-category="education" onclick="window.location.href='/app/ai-tutor'">
+        <img src="pic/store_pic7.png" alt="AI Tutor" class="app-image">
+        <div class="app-info">
+          <h2 class="app-name">AI Tutor</h2>
+          <p class="app-description">Personalized learning experience with AI-powered tutoring.</p>
+          <div class="app-meta">
+            <p class="app-price">$34.99/month</p>
+            <div class="app-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-value">4.7</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-card" data-category="finance" onclick="window.location.href='/app/financial-wizard'">
+        <img src="pic/store_pic8.png" alt="Financial Wizard" class="app-image">
+        <div class="app-info">
+          <h2 class="app-name">Financial Wizard</h2>
+          <p class="app-description">AI-powered financial planning and investment strategies.</p>
+          <div class="app-meta">
+            <p class="app-price">$49.99/month</p>
+            <div class="app-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-value">4.4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 AI Genie Hub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Search functionality
+    const searchForm = document.querySelector('.search-bar');
+    const searchInput = document.getElementById('search-input');
+    const appCards = document.querySelectorAll('.app-card');
+
+    searchForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const searchTerm = searchInput.value.toLowerCase();
+      appCards.forEach(card => {
+        const appName = card.querySelector('.app-name').textContent.toLowerCase();
+        const appDescription = card.querySelector('.app-description').textContent.toLowerCase();
+        if (appName.includes(searchTerm) || appDescription.includes(searchTerm)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+
+    // Category filter functionality
+    const categoryFilters = document.querySelectorAll('.category-filter');
+
+    categoryFilters.forEach(filter => {
+      filter.addEventListener('click', () => {
+        const category = filter.dataset.category;
+        categoryFilters.forEach(f => f.classList.remove('active'));
+        filter.classList.add('active');
+
+        appCards.forEach(card => {
+          if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
